@@ -1,0 +1,18 @@
+- qname: "example_q"
+  server: "192.168.10.3"
+  port: "5672"
+  cpq: 4 # Connections per queue
+  login: "test"
+  pass: "test"
+  vhost: "test" # Optional, default ""
+  durable: True # Optional, default False
+  no_wait: True # Optional, default False
+  auto_delete: True # Optional, default False
+  exclusive: True # Optional, default False
+  exchange: "test" # Optional, default False
+- qname: "example_q2"
+  server: "192.168.10.3"
+  port: "5672"
+  cpq: 2 # Connections per queue
+  login: "test"
+  pass: "test"
