@@ -18,6 +18,8 @@ docker run -it --rm -v /tmp/amqgate/:/tmp/amqgate/ -v $(pwd)/config.yaml:/app/co
 [Install Go](https://go.dev/doc/install)
 
 ```
+git clone https://github.com/pipetky/AmqGate.git && \
+cd AmqGate && \
 CGO_ENABLED=0 GOOS=linux go build -o ./amqgate && \
 sudo mv amqgate /usr/local/bin/
 ```
@@ -39,7 +41,7 @@ Example config.yaml file:
   no_wait: True # Optional, default False
   auto_delete: True # Optional, default False
   exclusive: True # Optional, default False
-  exchange: "test" # Optional, default False
+  exchange: "test" # Optional, default ""
 - qname: "example_q2"
   server: "192.168.10.3"
   port: "5672"
@@ -65,3 +67,7 @@ socket_close($socket);
 }
 ?>
 ```
+---
+Aleksandr Karabchevskiy - pipetky@gmail.com
+
+Project Link: https://github.com/pipetky/AmqGate
